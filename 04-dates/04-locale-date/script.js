@@ -9,10 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  let today = new Date();
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  let date = today.toLocaleDateString("en-GB", options);
+  let time = today.getHours() + "h" + today.getMinutes();
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-
-    // your code here
-
+  document.getElementById("target").innerHTML = date + " " + time;
 })();

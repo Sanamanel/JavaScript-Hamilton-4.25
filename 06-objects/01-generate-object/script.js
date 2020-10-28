@@ -10,5 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", function () {
+    let maFiche = new Object();
+    maFiche.name = "Rachida";
+    maFiche.lastname = "Haddouch";
+    maFiche.age = 38;
+    maFiche.city = "Jupille";
+    maFiche.country = "Belgium";
+
+    console.table(maFiche);
+  });
 })();
+
+// your code here
+/*const me = {
+    firstname: "Rachida",
+    lastname: "Haddouch",
+    age: 38,
+    city: "Liege",
+    counrty: "Belgium",
+  };
+  document.getElementById("run").addEventListener("click", function () {
+    console.log(me);
+  });
+})();/* */

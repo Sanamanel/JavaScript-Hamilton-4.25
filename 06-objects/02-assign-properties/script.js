@@ -10,21 +10,49 @@
 // You will have time to focus on it later.
 
 (() => {
-    const computers = [
-        {id: "0001", available: false, user: "leny", os: "macOS"},
-        {id: "0002", available: false, user: "Nicolas"},
-        {id: "0003"},
-        {id: "0004", os: "Windows"},
-        {id: "0005"},
-        {id: "0006", os: "macOS"},
-        {id: "0007"},
-        {id: "0008"},
-        {id: "0009", available: false, user: "Anthony"},
-    ];
-    const defaultProps = {
-        available: true,
-        os: "linux",
-        user: null,
-    };
-    // your code here
+  const computers = [
+    { id: "0001", available: false, user: "leny", os: "macOS" },
+    { id: "0002", available: false, user: "Nicolas" },
+    { id: "0003" },
+    { id: "0004", os: "Windows" },
+    { id: "0005" },
+    { id: "0006", os: "macOS" },
+    { id: "0007" },
+    { id: "0008" },
+    { id: "0009", available: false, user: "Anthony" },
+  ];
+  const defaultProps = {
+    available: true,
+    os: "linux",
+    user: null,
+  };
+  // your code here
+  document.getElementById("run").addEventListener("click", function () {
+    computers.forEach((element) => {
+      element.user = element.user || defaultProps.user;
+      element.os = element.os || defaultProps.os;
+      if (element.available !== false) {
+        // si strictement différent de false
+        element.available = defaultProps.available;
+      }
+    });
+    console.table(computers);
+  });
 })();
+
+/* document.getElementById("run").addEventListener("click", function () {
+    const returnedComputers = Object.assign(computers, defaultProps);
+    console.table(returnedComputers);
+  });
+  
+    computers.forEach((element) => {
+      element.user = element.user || defaultProps.user;
+      element.os = element.os || defaultProps.os;
+      element.available = element.available || defaultProps.available;
+      console.table(element);
+    });
+  
+  
+  
+  
+  */

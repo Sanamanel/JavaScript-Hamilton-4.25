@@ -9,8 +9,33 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  // your code here
+  var age, gender, city, question;
+  age = prompt("Quel ages avez vous?");
+  gender = prompt("Quel est votre genre?");
+  city = prompt("Dans quel ville vivez-vous?");
+  question = confirm(
+    " Vous êtes bien une personne de sexe " +
+      gender +
+      " de " +
+      age +
+      " ans " +
+      " et vivant à " +
+      city
+  );
+  if (question == false) {
+    age = prompt("Quel ages avez vous?");
+    gender = prompt("Quel est votre genre?");
+    city = prompt("Dans quel ville vivez-vous?");
+    question = confirm(
+      " Vous êtes bien une personne de sexe " +
+        gender +
+        " de " +
+        age +
+        " ans " +
+        " et vivant à " +
+        city
+    );
+  }
 })();

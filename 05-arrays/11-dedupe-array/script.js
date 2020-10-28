@@ -9,25 +9,33 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  const fruits = [
+    "cerise",
+    "durian",
+    "pomme",
+    "poire",
+    "fraise",
+    "tomate",
+    "orange",
+    "mandarine",
+    "fraise",
+    "durian",
+    "pêche",
+    "cerise",
+    "raisin",
+    "cerise",
+  ];
 
-    const fruits = [
-        "cerise",
-        "durian",
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "fraise",
-        "durian",
-        "pêche",
-        "cerise",
-        "raisin",
-        "cerise",
-    ];
-
-    // your code here
-
+  // your code here
+  document.getElementById("run").addEventListener("click", function () {
+    let dedupe = fruits.filter((item, index) => fruits.indexOf(item) === index);
+    console.log(dedupe);
+  });
 })();
+
+/* document.getElementById("run").addEventListener("click", function(){    
+        let unique = [...new Set(fruits)];
+        console.log(unique);
+    }); 
+ */

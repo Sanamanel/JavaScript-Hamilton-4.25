@@ -10,33 +10,50 @@
 // You will have time to focus on it later.
 
 (() => {
-    const birds = [
-        {name: "mouette", fem: true},
-        {name: "corbeau"},
-        {name: "mésange", fem: true},
-        {name: "hibou"},
-        {name: "buse", fem: true},
-        {name: "pigeon"},
-        {name: "pie", fem: true},
-        {name: "vautour"},
-        {name: "faucon"},
-        {name: "rouge-gorge"},
-        {name: "tourterelle", fem: true},
-        {name: "corneille", fem: true},
-    ];
-    const adjectives = new Set([
-        "cendré",
-        "huppé",
-        "chantant",
-        "hurlant",
-        "perché",
-        "grand",
-        "petit",
-        "bleu",
-        "pantelant",
-        "tangent",
-        "arboré",
-    ]);
+  const birds = [
+    { name: "mouette", fem: true },
+    { name: "corbeau" },
+    { name: "mésange", fem: true },
+    { name: "hibou" },
+    { name: "buse", fem: true },
+    { name: "pigeon" },
+    { name: "pie", fem: true },
+    { name: "vautour" },
+    { name: "faucon" },
+    { name: "rouge-gorge" },
+    { name: "tourterelle", fem: true },
+    { name: "corneille", fem: true },
+  ];
+  const adjectives = new Set([
+    "cendré",
+    "huppé",
+    "chantant",
+    "hurlant",
+    "perché",
+    "grand",
+    "petit",
+    "bleu",
+    "pantelant",
+    "tangent",
+    "arboré",
+  ]);
 
-    // your code here
+  // your code here
+  document.getElementById("run").addEventListener("click", function () {
+    let randomBirds = Math.floor(Math.random() * birds.length);
+    let birdName = birds[randomBirds].name;
+    let birdFem = birds[randomBirds].fem;
+
+    let randomAdjectives = Math.floor(Math.random() * adjectives.size);
+    let adjectivesArray = [...adjectives];
+    let adjective = adjectivesArray[randomAdjectives];
+
+    if (birdFem) {
+      document.getElementById("target").innerHTML =
+        "La " + birdName + " " + adjective + "e";
+    } else {
+      document.getElementById("target").innerHTML =
+        "Le " + birdName + " " + adjective;
+    }
+  });
 })();

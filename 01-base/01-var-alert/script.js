@@ -9,9 +9,10 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    let whatever = "hello world!!!";
-    alert(whatever);
-    // your code here
-
+(function () {
+  let whatever = "hello world!!!";
+  alert(whatever);
+  // your code here
 })();
+var Hello = "hello world!";
+alert(Hello);

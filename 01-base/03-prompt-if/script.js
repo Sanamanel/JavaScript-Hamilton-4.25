@@ -9,8 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
+(function () {
   // your code here
+  var result;
 
+  result = prompt("Do you want some cake ?");
+  if (result == "Yes") {
+    alert("Congratulation");
+  } else {
+    alert("More cake for me then :p !");
+  }
 })();

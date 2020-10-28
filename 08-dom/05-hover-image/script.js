@@ -9,8 +9,10 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
-})();
+function changePic1() {
+  document.getElementsByTagName("img").src = "../../_shared/img/kiss.svg";
+}
+function changePic2() {
+  document.getElementsByTagName("img").src =
+    "../../_shared/img/kiss-wink-heart.svg";
+}

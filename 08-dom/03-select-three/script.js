@@ -9,8 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
 
-    // your code here
-
+  let elements, i;
+  elements = document.querySelectorAll(".target");
+  for (i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = "owned";
+  }
 })();

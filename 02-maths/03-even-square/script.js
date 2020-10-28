@@ -9,12 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-
-    });
-
+(function () {
+  document.getElementById("run").addEventListener("click", function () {
+    var number = 2;
+    while (number <= 21) {
+      alert(Math.pow(number, 2));
+      number += +2;
+    }
+  });
 })();

@@ -9,8 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  // your code here
+  var message = "Hello ",
+    name,
+    end = "!",
+    result;
+  var name = prompt("What's your name ?");
+  result = message + name + end;
+  alert(result);
 })();
