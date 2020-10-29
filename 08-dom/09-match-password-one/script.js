@@ -9,8 +9,25 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  document.getElementById("run").addEventListener("click", function () {
+    // Function to check Whether both passwords
+    // is same or not.
 
-    // your code here
+    password1 = document.getElementById("pass-one").value;
+    password2 = document.getElementById("pass-two").value;
 
+    if (password1 != password2) {
+      document.getElementById("pass-one").style.borderColor = "red";
+      document.getElementById("pass-two").style.borderColor = "red";
+    }
+
+    // If same return True.
+    else {
+      alert("Password Match: Welcome to Becode Javascript!");
+      document.getElementById("pass-one").style.borderColor = "silver";
+      document.getElementById("pass-two").style.borderColor = "silver";
+    }
+  });
 })();

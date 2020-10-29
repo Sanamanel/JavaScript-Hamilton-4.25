@@ -9,10 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function changePic1() {
-  document.getElementsByTagName("img").src = "../../_shared/img/kiss.svg";
-}
-function changePic2() {
-  document.getElementsByTagName("img").src =
-    "../../_shared/img/kiss-wink-heart.svg";
-}
+(function () {
+  // your code here
+
+  let x = document.getElementsByTagName("IMG")[0].getAttribute("src");
+  let y = document.getElementsByTagName("IMG")[0].getAttribute("data-hover");
+
+  document.getElementsByTagName("img")[0].addEventListener("mouseover", () => {
+    document.getElementsByTagName("img")[0].src = y;
+  });
+  document.getElementsByTagName("img")[0].addEventListener("mouseout", () => {
+    document.getElementsByTagName("img")[0].src = x;
+  });
+})();

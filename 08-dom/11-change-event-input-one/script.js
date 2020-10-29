@@ -12,5 +12,7 @@
 (function() {
 
     // your code here
+    pass = document.getElementById("pass-one").value;
+    if(pass.value.length > 10)
 
 })();

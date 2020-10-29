@@ -15,5 +15,4 @@
   let img = new Image();
   img.src = 'http://www.randomkittengenerator.com/cats/rotator.php"';
   document.getElementById("target").appendChild(img);
-  document.innerHTML = "Image Element Added.";
 })();

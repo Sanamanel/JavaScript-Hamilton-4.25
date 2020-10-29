@@ -9,8 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  var letterContainer = document.querySelector("#target");
 
-    // your code here
+  var letters = letterContainer.innerText;
 
+  letters = letters.split("");
+
+  letterContainer.innerText = "";
+
+  letters.forEach(function (letter, i) {
+    var wrap = document.createElement("span");
+    wrap.innerText = letter;
+
+    wrap.style.fontSize = i + "px";
+
+    letterContainer.appendChild(wrap);
+  });
 })();

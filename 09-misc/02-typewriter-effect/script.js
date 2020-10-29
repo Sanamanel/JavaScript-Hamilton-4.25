@@ -9,8 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  // your code here
+  var i = 0;
+  var text = document.getElementById("target").textContent;
+  var speed = 50; /* The speed/duration of the effect in milliseconds */
 })();
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("material").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
