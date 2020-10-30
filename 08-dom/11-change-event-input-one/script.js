@@ -9,10 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  let password = document.getElementById("pass-one");
 
-    // your code here
-    pass = document.getElementById("pass-one").value;
-    if(pass.value.length > 10)
-
+  password.addEventListener("keyup", () => {
+    if (password.value.length > 10) {
+      password.value = password.value.slice(0, 10);
+    }
+    n = password.value.length;
+    document.getElementById("counter").innerHTML = n + "/10";
+  });
 })();

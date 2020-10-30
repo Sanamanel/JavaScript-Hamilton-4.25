@@ -18,16 +18,14 @@
     password1 = document.getElementById("pass-one").value;
     password2 = document.getElementById("pass-two").value;
 
-    if (password1 != password2) {
-      document.getElementById("pass-one").style.borderColor = "red";
-      document.getElementById("pass-two").style.borderColor = "red";
+    if (password1 !== password2) {
+      document.getElementById("pass-two").classList.add("error");
     }
 
     // If same return True.
     else {
       alert("Password Match: Welcome to Becode Javascript!");
-      document.getElementById("pass-one").style.borderColor = "silver";
-      document.getElementById("pass-two").style.borderColor = "silver";
+      document.getElementById("pass-two").classList.remove("error");
     }
   });
 })();

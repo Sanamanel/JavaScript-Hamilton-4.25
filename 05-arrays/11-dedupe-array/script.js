@@ -29,13 +29,15 @@
 
   // your code here
   document.getElementById("run").addEventListener("click", function () {
-    let dedupe = fruits.filter((item, index) => fruits.indexOf(item) === index);
+    let dedupe = [...new Set(fruits)];
     console.log(dedupe);
   });
 })();
 
-/* document.getElementById("run").addEventListener("click", function(){    
-        let unique = [...new Set(fruits)];
-        console.log(unique);
-    }); 
+/*  other way 
+document.getElementById("run").addEventListener("click", function () {
+    let dedupe = fruits.filter((item, index) => fruits.indexOf(item) === index);
+    console.log(dedupe);
+  });
+
  */

@@ -12,24 +12,15 @@
 (() => {
   // your code here
 
-  class person {
-    constructor(firstname, lastname) {
-      this.firstname = firstname;
-      this.lastname = lastname;
-    }
-    get fullName() {
-      return `${this.firstname} ${this.lastname}`;
-    }
+  const required = /\d.*\d/;
+  const field = document.getElementById("pass-one");
 
-    set fullName(value) {
-      [this.firstname, this.lastname] = value.split(" ");
+  field.addEventListener("keyup", () => {
+    if (field.value.length >= 8 && required.test(field.value)) {
+      document.getElementById("validity").innerText = "ok";
+    } else {
+      document.getElementById("validity").innerText = "Not ok";
     }
-  }
-  const me = new person("Rachida", "Haddouch");
-  document.getElementById("run").addEventListener("click", function () {
-    console.log(me.fullName);
-    me.fullName = "Manel Saidi";
-    console.log(me.fullName);
   });
   // your code here
 })();

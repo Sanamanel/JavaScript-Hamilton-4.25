@@ -11,20 +11,20 @@
 
 (function () {
   // your code here
-  var letterContainer = document.querySelector("#target");
+  let letterContainer = document.querySelector("#target");
 
-  var letters = letterContainer.innerText;
+  let letters = letterContainer.innerText;
 
   letters = letters.split("");
 
   letterContainer.innerText = "";
 
+  const size = [15, 20, 25, 30, 35, 30, 25, 20, 13, 10];
+
   letters.forEach(function (letter, i) {
-    var wrap = document.createElement("span");
+    let wrap = document.createElement("span");
     wrap.innerText = letter;
-
-    wrap.style.fontSize = i + "px";
-
+    wrap.style.fontSize = size[i % size.length] + "px";
     letterContainer.appendChild(wrap);
   });
 })();

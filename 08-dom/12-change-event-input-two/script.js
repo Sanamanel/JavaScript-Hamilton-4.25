@@ -9,8 +9,33 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  let num = /\d.*\d/;
+  let password = document.getElementById("pass-one");
 
-    // your code here
-
+  password.addEventListener("keyup", () => {
+    if (password.value.length >= 8 && num.test(password.value)) {
+      document.getElementById("validity").innerText = "ok";
+    } else {
+      document.getElementById("validity").innerText = "Not ok";
+    }
+  });
 })();
+
+/*
+(function() {
+    let password = document.getElementById('pass-one');
+    password.addEventListener('keyup', () => {
+        const paragraph = password.value;
+        const regex = /[0-9]/g;
+        const number = paragraph.match(regex);
+        if (number.length >=2 && paragraph.length >= 8){
+            document.getElementById("validity").innerHTML = "ok";
+        }
+        else { 
+            document.getElementById("validity").innerHTML = "Not ok";
+        };
+    });
+
+})(); */

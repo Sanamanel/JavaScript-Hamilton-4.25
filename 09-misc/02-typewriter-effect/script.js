@@ -11,14 +11,18 @@
 
 (function () {
   // your code here
-  var i = 0;
-  var text = document.getElementById("target").textContent;
-  var speed = 50; /* The speed/duration of the effect in milliseconds */
-})();
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("material").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+  let i = 0;
+  let target = document.getElementById("target");
+  let text = target.innerText;
+  target.innerHTML = "";
+  let speed = 90; /* The speed/duration of the effect in milliseconds */
+
+  function typeWriter() {
+    if (i < text.length) {
+      target.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
   }
-}
+  typeWriter();
+})();
