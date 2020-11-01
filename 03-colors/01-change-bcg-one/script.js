@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (function () {
-  // your code here
-
+// my solution
   red.addEventListener("click", function () {
     document.body.style.background = "red";
   });
