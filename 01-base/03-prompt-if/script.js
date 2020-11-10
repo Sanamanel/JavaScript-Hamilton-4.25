@@ -11,7 +11,7 @@
 
 (function () {
   // your code here
-  var result;
+  let result;
 
   result = prompt("Do you want some cake ?");
   if (result == "Yes") {

@@ -14,7 +14,7 @@
 
   document.getElementById("addition").addEventListener("click", function () {
     // perform an addition
-    var result;
+    let result;
     result =
       parseInt(document.getElementById("op-one").value) +
       parseInt(document.getElementById("op-two").value);
@@ -26,7 +26,7 @@
     .getElementById("substraction")
     .addEventListener("click", function () {
       // perform an substraction
-      var result;
+      let result;
       result =
         parseInt(document.getElementById("op-one").value) -
         parseInt(document.getElementById("op-two").value);
@@ -38,7 +38,7 @@
     .getElementById("multiplication")
     .addEventListener("click", function () {
       // perform an multiplication
-      var result;
+      let result;
       result =
         parseInt(document.getElementById("op-one").value) *
         parseInt(document.getElementById("op-two").value);
@@ -48,7 +48,7 @@
 
   document.getElementById("division").addEventListener("click", function () {
     // perform an division
-    var result;
+    let result;
     result =
       parseInt(document.getElementById("op-one").value) /
       parseInt(document.getElementById("op-two").value);

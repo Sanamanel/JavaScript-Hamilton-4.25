@@ -11,11 +11,11 @@
 
 (function () {
   // your code here
-  var message = "Hello ",
+  let message = "Hello ",
     name,
     end = "!",
     result;
-  var name = prompt("What's your name ?");
+  let name = prompt("What's your name ?");
   result = message + name + end;
   alert(result);
 })();

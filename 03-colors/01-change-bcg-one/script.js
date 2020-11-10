@@ -10,7 +10,8 @@
 // You will have time to focus on it later.
 
 (function () {
-  // your code here
+  // Use the JavaScript style property
+  // Function to change webpage background color
 
   red.addEventListener("click", function () {
     document.body.style.background = "red";

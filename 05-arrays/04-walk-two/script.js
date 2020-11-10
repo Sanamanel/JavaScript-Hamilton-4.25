@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function () {
-  var fruits = [
+  let fruits = [
     "pomme",
     "poire",
     "fraise",

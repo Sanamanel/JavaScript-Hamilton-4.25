@@ -11,7 +11,7 @@
 
 (function () {
   document.getElementById("run").addEventListener("click", function () {
-    var number = 2;
+    let number = 2;
     while (number <= 21) {
       alert(Math.pow(number, 2));
       number += +2;

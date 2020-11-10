@@ -25,10 +25,18 @@
     "cherry",
   ];
 
-  // your code here
+  // Boucle for
   for (let i = 0; i < fruits.length; i++) {
     document.getElementById("run").addEventListener("click", function () {
       console.log(fruits[i]);
     });
   }
 })();
+
+/* Boucle for of
+  for (let i of fruits) {
+    document.getElementById("run").addEventListener("click", function () {
+      console.log(i);
+    });
+  }
+*/

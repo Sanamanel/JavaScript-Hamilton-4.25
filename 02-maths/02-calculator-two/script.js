@@ -14,7 +14,7 @@
 
   const performOperation = (operation) => {
     // perform the operation
-    var result;
+    let result;
     switch (operation) {
       case "addition":
         result =

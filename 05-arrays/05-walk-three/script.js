@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function () {
-  var people = [
+  let people = [
     {
       firstname: "Garald",
       lastname: "Freschi",

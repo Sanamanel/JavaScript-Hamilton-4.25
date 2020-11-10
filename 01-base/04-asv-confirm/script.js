@@ -11,7 +11,7 @@
 
 (function () {
   // your code here
-  var age, gender, city, question;
+  let age, gender, city, question;
   age = prompt("Quel ages avez vous?");
   gender = prompt("Quel est votre genre?");
   city = prompt("Dans quel ville vivez-vous?");
