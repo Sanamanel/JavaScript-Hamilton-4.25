@@ -10,16 +10,54 @@
 // You will have time to focus on it later.
 
 (() => {
-  // your code here
-  function callback(error, array) {
-    if (error) {
-      console.log("Error");
+  function myFirstCallBack(error, articles) {
+    error === null ? console.log(articles) : console.log("Error!");
+  }
+
+  document.getElementById("run").addEventListener("click", function () {
+    window.lib.getPosts(myFirstCallBack);
+  });
+})();
+/* 
+(() => {
+  function myFirstCallBack(error, articlesArray) {
+    if (error === null) {
+      console.log(articlesArray);
     } else {
-      console.table(array);
+      console.log("Error!");
     }
   }
 
   document.getElementById("run").addEventListener("click", function () {
-    window.lib.getPosts(callback);
+    window.lib.getPosts(myFirstCallBack);
   });
 })();
+
+
+   document.getElementById("run").addEventListener("click", () => {
+
+        //quand on clique sur le bouton, la fonction getPosts est lancée
+        window.lib.getPosts(
+
+            //la fonction ci-dessous est la fonction callback en paramètre de getPosts()
+            (error, articles) => {
+                if(error) {
+                    // il y a une erreur : error vaut qq chose (donc considéré comme true par le if)
+                    console.error(error);
+                } else {
+                    //  il n'y a pas d'erreur : error vaut null (considéré comme false, on fait le else) : on peut lancer le code souhaité
+                    console.log(articles);
+                }
+            }
+
+        );
+
+    });
+
+
+
+
+
+
+
+*/

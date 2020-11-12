@@ -6,9 +6,18 @@
  * started at 09/05/2019
  */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
+//await permet de mettre en pause l’exécution du code
+// tant qu’une promesse n’est pas consommée, puis retourne ensuite le résultat de la promesse.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", async () => {
+    try {
+      const articles = await window.lib.getPosts(); //Au final, await est une syntaxe alternative à then(), plus facile à lire, à comprendre et à écrire.
+      console.log(articles);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 })();
+//Async is for declaring that a function will handle asynchronous operations
+//and await is used to declare that we want to “await” the result of an asynchronous operation inside a function that has the async keyword.

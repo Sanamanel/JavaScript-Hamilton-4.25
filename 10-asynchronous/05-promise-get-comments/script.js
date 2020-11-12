@@ -10,5 +10,51 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", () => {
+    window.lib.getPosts().then((articles) => {
+      articles.forEach((article) => {
+        window.lib.getComments(article.id).then((comment) => {
+          article.comment = comment;
+        });
+      });
+      console.log(articles);
+    });
+  });
 })();
+
+/*
+(() => {
+  document.getElementById("run").addEventListener("click", () => {
+    window.lib
+      .getPosts()
+
+      .then((resolve) => {
+        resolve.forEach((element) => {
+          window.lib
+            .getComments(element.id)
+
+            .then((comment) => {
+          
+
+              element.comment = comment;
+            });
+        });
+
+        console.log(resolve);
+      });
+  });
+})();
+
+(() => {
+  document.getElementById('run').addEventListener('click', () => {
+      window.lib.getPosts()
+          .then(data => {
+              data.forEach(element => {
+                  window.lib.getComments(element.id).then(data => {
+                      element.comments = data;
+                      console.log(element)
+                  })
+              });
+          })
+  })
+})(); */

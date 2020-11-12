@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", () => {
+    window.lib
+      .getPersons()
+
+      .then(function (resolve) {
+        console.log(resolve); // Do something with the result
+      })
+      .catch((error) => {
+        console.error(error); // Handle error
+      });
+  });
 })();

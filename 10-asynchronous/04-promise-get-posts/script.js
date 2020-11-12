@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.querySelector("#run").addEventListener("click", () => {
+    window.lib
+      .getPosts()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
 })();
+
+/*
+(() => {
+ 
+  document.querySelector("#run").addEventListener("click", () => {
+     const promises = window.lib.getPosts()
+      console.log(promises);
+  });
+})(); */
