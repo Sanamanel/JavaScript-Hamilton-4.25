@@ -22,7 +22,6 @@
             article.comment = comment;
           });
       });
-
       console.log(result);
     } catch (error) {
       console.log(error);

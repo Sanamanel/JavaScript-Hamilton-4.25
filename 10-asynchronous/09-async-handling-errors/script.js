@@ -21,3 +21,18 @@
     }
   });
 })();
+
+/*
+(() => {
+      document.querySelector("#run").addEventListener("click",  async () => {
+    
+	try{
+		let array = await window.lib.getPersons();
+		console.log(array);
+	}
+	
+	catch{
+		console.error(error);
+	}
+	})
+})(); */

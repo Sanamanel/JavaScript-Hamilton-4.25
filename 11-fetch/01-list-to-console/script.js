@@ -10,6 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
+  document.querySelector("#run").addEventListener("click", () => {
+    fetch("http://localhost:3000/heroes")
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  });
+})();
+
+/* 
+
+(() => {
   document
     .getElementById("run")
     .addEventListener("click", async function getHeroes() {
@@ -19,3 +30,5 @@
       console.log(heroes);
     });
 })();
+
+*/
